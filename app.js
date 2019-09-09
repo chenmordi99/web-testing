@@ -21,6 +21,9 @@ app.post('/notification', require('./api/notification/create'));
 //2.2
 app.get('/notification', require('./api/notification/fetch')); 
 
+//2.3
+app.delete('/notification', require('./api/notification/delete'));
+
 
 console.log('app running on port 3000...');
 

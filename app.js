@@ -1,7 +1,5 @@
 const express = require('express'); 
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const Account = require('./models/account/Account');
 
 mongoose.connect('mongodb://localhost:27017/codeTest', {
 	autoReconnect: true,
@@ -13,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/codeTest', {
 const app = express();
 app.listen(3000);
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(require('body-parser').json());
 //1.1
 app.post('/account/create', require('./api/account/create')); 
 

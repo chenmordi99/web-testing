@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 //1.1
 app.post('/account/create', require('./api/account/create')); 
 
+//2.1
+app.post('/notification', require('./api/notification/create'));
 
 
 console.log('app running on port 3000...');
